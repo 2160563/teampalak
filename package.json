@@ -11,6 +11,8 @@
     "url": "https://github.com/2160563/teampalak.git"
   },
   "dependencies": {
-    "async": "^2.6.2"
+    "async": "^2.6.2",
+    "express": "^4.16.4",
+    "mysql": "^2.16.0"
   }
 }
