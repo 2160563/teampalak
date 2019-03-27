@@ -28,7 +28,7 @@ app.listen(process.env.PORT || 4000, function(){
 /**
 * CACHE
 */
-app.use(express.static('public'));
+app.use(express.static('./public'));
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(session({
