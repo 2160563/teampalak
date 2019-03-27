@@ -1,8 +1,7 @@
 {
   "name": "sdfsdfs",
   "version": "1.0"
-}
-
-"scripts": {
+    "scripts" : {
     "start": "node server.js"
+}
 }
