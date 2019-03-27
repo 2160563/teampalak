@@ -1,14 +1,16 @@
-  {
-    "name": "my_package",
-    "description": "",
-    "version": "1.0.0",
-    "main": "server.js",
-    "scripts": {
-      "test": "node server.js"
-        
-    },
-    "repository": {
-      "type": "git",
-      "url": "https://github.com/2160563/teampalak.git"
-    }
+{
+  "name": "my_package",
+  "description": "",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/2160563/teampalak.git"
+  },
+  "dependencies": {
+    "async": "^2.6.2"
   }
+}
