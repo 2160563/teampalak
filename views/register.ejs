@@ -55,17 +55,24 @@
               <ul class="nav topnav">
 
                 <li class="dropdown success">
-                  <a href="/"><i class="icon-home icon-white"></i> Home</a>
-
+                  <a href="/home"><i class="icon-home icon-white"></i> Home</a>
                 </li>
-
-                <li class="dropdown primary active">
-                  <a href="#"><i class="icon-star icon-white"></i> Join Us</a>
-                  <ul class="dropdown-menu">
-                    <li><a href="/login">Log in</a></li>
-                    <li><a href="/register">Register</a></li>
-
+        
+        <li class="dropdown warning">
+                  <a href="/tournaments"><i class="icon-bullhorn icon-white"></i> Tournaments</a>
+               
                 </li>
+                <li class="dropdown primary">
+                  <a href="/history2"><i class="icon-bullhorn icon-white"></i> History</a>
+                </li>
+         
+        <li class="dropdown success active">
+                  <a href="/register"><i class="icon-star icon-white"></i>Register</a>
+              </li>
+               
+                <li class="dropdown primary">
+                  <a href="/login"><i class="icon-star icon-white"></i>Log in</a>
+              </li>
                 </ul>
                 </li>
 
@@ -87,20 +94,24 @@
 
         <div class="containerr">
           <h1 id="reg">Registration</h1>
+          <label style="text-align: left;"><h5>First Name</h5></label>
           <input type="text" placeholder="First Name" name="firstName" maxlength="45" required>
+          <label style="text-align: left;"><h5>Last Name</h5></label>
           <input type="text" placeholder="Last Name" name="lastName" maxlength="45" required>
+          <label style="text-align: left;"><h5>User Name</h5></label>
           <input type="text" placeholder="User Name" name="user" maxlength="15" required>
+          <label style="text-align: left;"><h5>Password</h5></label>
           <input type="password" placeholder="Password" name="password" maxlength="128" required>
+          <label style="text-align: left;"><h5>Confirm Password</h5></label>
           <input type="password" placeholder="Confirm Password" name="repassword" maxlength="128" required>
-          <input type="text" placeholder="E-mail Address" name="email" maxlength="100" required>
+          <label style="text-align: left;"><h5>E-mail Address</h5></label>
+          <input type="text"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="E-mail Address" name="email" maxlength="100" required>
         </div>
 
         <div class="games">
           <h1 id="game">Game ID's</h1>
           <img src="assets/img/lol.png" alt="Logo" class="lol" width="280" height="90">
           <input type="text" placeholder="League of Legends" name="lol">
-          <img src="assets/img/csgo.png" alt="Logo" class="csgo" width="200" height="100">
-          <input type="text" placeholder="Counter Strike: Global Offensive" name="csgo">
           <img src="assets/img/dota-2.png" alt="Logo" class="dota2" width="120" height="120">
           <input type="text" placeholder="DotA 2" name="dota2">
 

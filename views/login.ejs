@@ -54,21 +54,26 @@
             <nav>
               <ul class="nav topnav">
                 <li class="dropdown success">
-                  <a href="/"><i class="icon-home icon-white"></i> Home</a>
+                  <a href="/home"><i class="icon-home icon-white"></i> Home</a>
                 </li>
-
+        
+        <li class="dropdown warning">
+                  <a href="/tournaments"><i class="icon-bullhorn icon-white"></i> Tournaments</a>
+               
+                </li>
+                <li class="dropdown primary">
+                  <a href="/history2"><i class="icon-bullhorn icon-white"></i> History</a>
+                </li>
+         
+        <li class="dropdown success">
+                  <a href="/register"><i class="icon-star icon-white"></i>Register</a>
+              </li>
+               
                 <li class="dropdown primary active">
-                  <a href="#"><i class="icon-star icon-white"></i> Join Us</a>
-                  <ul class="dropdown-menu">
-                    <li><a href="/login">Log in</a></li>
-                    <li><a href="/register">Register</a></li>
-
-                </li>
+                  <a href="/login"><i class="icon-star icon-white"></i>Log in</a>
+              </li>
                 </ul>
                 </li>
-              </ul>
-              </li>
-
               </ul>
             </nav>
           </div>
@@ -81,11 +86,13 @@
 
   <div class="login-page">
     <div class="form">
-      <form action="/login" method="post">
+      <form action="/login" method="post" autocomplete="off">
         <div class="imgcontainer">
           <img src="assets/img/roundlogo.png" alt="Logo" class="logo" height="150" width="150">
+            <% if (message.length > 0) { %>
+                <div class="alert alert-danger text-center"><%= message %></div>
+            <% } %>
         </div> <br>
-
         <div class="containerr">
           <input name="user" maxlength="15" type="text" placeholder="Enter username" name="identity" required>
           <input name="password" maxlength="128" type="password" placeholder="Enter password" name="security" required>

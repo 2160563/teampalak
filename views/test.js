@@ -5,41 +5,41 @@
 // Version 1.5.5
 
 
-(function(win, doc, $) {
+(function(win, doc, $){
 
-  var passes = 0;
-  var fails = 0;
-  var counter = 1;
-  win.tests = {};
+	var passes  = 0;
+	var fails   = 0;
+	var counter = 1;
+	win.tests   = {};
 
-  // home grown tester
-  function describe(description, callback) {
-    tests[description] = function() {
-      var result = (callback() === true) ? true : false;
-      fails = fails + (result ? 0 : 1);
-      passes = passes + (!result ? 0 : 1);
-      return console[result ? "info" : "error"](counter++ + " - " + description + ": " + (result ? "Pass" : "Fail"));
-    };
-    tests[description]();
-  };
+	// home grown tester
+	function describe(description, callback){
+		tests[description] = function(){
+			var result = (callback() === true) ? true : false;
+			fails = fails + (result ? 0 : 1);
+			passes = passes + (!result ? 0 : 1);
+			return console[result ? "info" : "error"](counter++ + " - " + description + ": " + (result ? "Pass" : "Fail"));
+		};
+		tests[description]();
+	};
 
-  // tests
-  $(function() {
+	// tests
+	$(function(){
 
-    console.log("\n\njquery.gracket.js Tests Started!\n\n");
+		console.log("\n\njquery.gracket.js Tests Started!\n\n");
+		
+		describe("jQuery is loaded", function(){
+			return typeof $ !== "undefined";
+		});
 
-    describe("jQuery is loaded", function() {
-      return typeof $ !== "undefined";
-    });
+		describe("Player width should be greater than or equal to minWidth", function(){
+			var playerWidth = $(".sammy-zettersten").eq(0).outerWidth(true);
+			var minWidth    = +($(".my_gracket h3").eq(0).css("minWidth").replace("px", ""));
+			return playerWidth >= minWidth;
+		});
+		//tbc...
+		console.log("\nThere were "+ passes +" Passes and "+ fails +" fails!\njquery.gracket.js Tests Completed!\n\n");
 
-    describe("Player width should be greater than or equal to minWidth", function() {
-      var playerWidth = $(".sammy-zettersten").eq(0).outerWidth(true);
-      var minWidth = +($(".my_gracket h3").eq(0).css("minWidth").replace("px", ""));
-      return playerWidth >= minWidth;
-    });
-    //tbc...
-    console.log("\nThere were " + passes + " Passes and " + fails + " fails!\njquery.gracket.js Tests Completed!\n\n");
-
-  });
+	});
 
 })(window, document, jQuery);
