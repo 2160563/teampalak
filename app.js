@@ -24,9 +24,9 @@ var connection = mysql.createConnection ({
   // user     : 'teampalak',
   // password : 'teampalak',
   // database : 'teampalak'
-  host     : 'localhost',
-  user     : 'root',
-  password : '',
+  host     : 'db4free.net',
+  user     : 'teampalak',
+  password : 'teampalak',
   database : 'teampalak'
 });
 connection.connect();
