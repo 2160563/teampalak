@@ -35,8 +35,9 @@ const publicVapidKey = "BOy3eO_ACgr1SiYPV0tsZYMF4mcY1UcKrWYlz2PMxUXKWN1vNQVa3pOs
 const privateVapidKey = "YtC241gDm5lYqKVSovOEoFATHb6vw7KxuK9n3f0P4aE";
 
 webPush.setVapidDetails('mailto:test@example.com', publicVapidKey, privateVapidKey);
-app.listen(80, function() {
-  console.log("Server running on port 8081.");
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Our app is running on port ${ PORT }`);
 });
 
 /**
